@@ -1,0 +1,74 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GRADIENTES */
+
+body{
+    /* background: linear-gradient( to left, rgb(19, 35, 69), yellow); */
+    background: radial-gradient( circle, #f1f1f1, #f3f3);
+}
+
+/* PROPIEDADES DE LA CAJA
+TRANSFORMACIONES */ 
+
+.caja{
+    background-color: tomato;
+    width: 250px;
+    height: 250px;
+    margin: 2rem;
+    text-align: center;
+    border: 5px solid black;
+    /* primer valor mueve el eje x y el segundo el eje y */
+    /* transform: translate(30px,50px); */
+
+    /* par rotar elementos se utiliza la unidad de medida grados 
+    transform: rotate(80deg);*/
+
+    /* transform: rotateX(70deg); */
+
+    /* transform: scale(1.2); */
+    /* aplicamos transiciones */
+    /* transition: 3s; */
+    transition: width 1s, heigth 10s;
+}
+
+/* PSEUDOCLASE HOVER */
+
+.caja:hover{
+    /* width: 150px;
+    background-color: burlywood;
+    color: white;
+    font-size: 30px;  */
+    /* border-radius: 100%; */
+    /* transform: translate(10px, 20px); */
+    /* transform: rotate(50deg); */
+    transform: scale(0.8);
+    width: 100px;
+    height: 100px;
+}
+
+/* ANIMACIONES */
+img{
+    width: 60%;
+}
+
+.girar{
+    /* declaro el nombre de la animacion */
+    animation-name: girar;
+    /* declaro la duracion de la animacion */
+    animation-iteration-count: infinite;
+    animation-duration: 170s;
+}
+
+@keyframes girar{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
